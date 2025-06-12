@@ -1,0 +1,82 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #fff0f5;
+    text-align: center;
+    color: #b30059;
+  }
+  
+  header {
+    padding: 2rem;
+    background-color: #ff6fa3;
+    color: white;
+    font-family: 'Dancing Script', cursive;
+  }
+  
+  .voltar {
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    background: #b30059;
+    padding: 6px 12px;
+    border-radius: 20px;
+  }
+  
+  main {
+    padding: 2rem;
+  }
+  
+  .tabuleiro {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    gap: 15px;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+  
+  .carta {
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    border: 2px solid #ff6fa3;
+    border-radius: 10px;
+    cursor: pointer;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.3s;
+  }
+  
+  .carta.revelada {
+    transform: scale(1.05);
+  }
+  
+  .mensagem {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    color: #b30059;
+  }
+  @media (max-width: 768px) {
+  .tabuleiro {
+    grid-template-columns: repeat(3, 80px);
+    gap: 10px;
+  }
+
+  .carta {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+@media (max-width: 480px) {
+  .tabuleiro {
+    grid-template-columns: repeat(2, 70px);
+  }
+
+  .carta {
+    width: 70px;
+    height: 70px;
+  }
+}
